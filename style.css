@@ -67,12 +67,12 @@ input{
     margin-left: 4px;
 }
 .container{
-   left: 420px;
+   left: 440px;
    bottom: 30px;
 }
 svg{
     position: absolute;
-    z-index: 1;
+    z-index: 5;
     top: 8px;
     left: 8px;
 }
@@ -113,27 +113,47 @@ input:hover{
     border-color: hsl(259, 100%, 65%);
 }
 
-@media screen and (max-width : 600px) {
+
+
+@media screen and (max-width : 375px) {
+
+   
 
     .calc{
-        width: 60%;
+        width: 90%;
+        top: 80px;
+        
     }
+    
     .block{
         width: 100%;
     }
     input{
-        font-size: 20px;
+        font-size: 15px;
     }
     .container{
-    
-        left: 118px;
+        left: 110px;
         bottom: 30px;
      }
+     .btn{
+        width: 55px;
+        height: 55px;
+        padding: 12px;
+}
+    svg{
+        width: 23px;
+        height: 23px;
+        top: 15px;
+        left: 15px;
+        
+    }
      .result{
-        font-size: 25px;
+        font-size: 20px;
+        left: 30px; 
+        bottom: 30px;
      }
      .message{
-        font-size: 8px;
+        font-size: 7px;
      }
     
 }
