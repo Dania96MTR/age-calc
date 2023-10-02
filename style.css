@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     position: relative;
@@ -6,13 +6,15 @@
     outline: none;
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
-    
+
 }
-body{
+
+body {
     background-color: hsl(0, 0%, 94%);
-    
+
 }
-.calc{
+
+.calc {
     position: relative;
     background-color: hsl(0, 0%, 100%);
     width: 40%;
@@ -24,27 +26,28 @@ body{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 130px;
 }
-.block{
+
+.block {
     width: 80%;
     display: flex;
     flex-direction: row;
     gap: 5px;
-    
+
 
 }
 
-div>p{
+div>p {
     font-size: 10px;
     color: hsl(0, 1%, 44%);
     margin-bottom: 5px;
-   
+
 
 }
 
-input{
+input {
     padding: 5px 7px;
     width: 85%;
-    border: 1px solid hsl(0, 7%, 75%) ;
+    border: 1px solid hsl(0, 7%, 75%);
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -55,7 +58,8 @@ input{
     font-size: 25px;
 
 }
-.message{
+
+.message {
     margin-bottom: 35px;
     font-family: 'Poppins', sans-serif;
 }
@@ -66,18 +70,20 @@ input{
     color: hsl(0, 0%, 8%);
     margin-left: 4px;
 }
-.container{
-   left: 440px;
-   bottom: 30px;
+
+.container {
+    left: 440px;
+    bottom: 30px;
 }
-svg{
+
+svg {
     position: absolute;
     z-index: 5;
     top: 8px;
     left: 8px;
 }
 
-.btn{
+.btn {
     width: 65px;
     height: 65px;
     border-radius: 50%;
@@ -94,66 +100,75 @@ svg{
 }
 
 h1 {
-    color:hsl(259, 100%, 65%) ;
+    color: hsl(259, 100%, 65%);
 }
-.result{
+
+.result {
     display: flex;
     flex-direction: column;
     bottom: 50px;
-    left: 50px; 
+    left: 50px;
     font-size: 30px;
 
 }
-.btn:hover{
+
+.btn:hover {
     background-color: hsl(0, 0%, 8%);
     border-color: hsl(0, 0%, 8%);
     color: hsl(0, 0%, 100%);
 }
-input:hover{
+
+input:hover {
     border-color: hsl(259, 100%, 65%);
 }
 
 
 
-@media screen and (max-width : 375px) {
+@media screen and (max-width : 500px) {
 
-   
 
-    .calc{
-        width: 90%;
+
+    .calc {
+        width: 100%;
         top: 80px;
-        
+
     }
-    
-    .block{
+
+    .block {
         width: 100%;
     }
-    input{
+
+    input {
         font-size: 15px;
     }
-    .container{
+
+    .container {
         left: 110px;
         bottom: 30px;
-     }
-     .btn{
+    }
+
+    .btn {
         width: 55px;
         height: 55px;
         padding: 12px;
-}
-    svg{
+    }
+
+    svg {
         width: 23px;
         height: 23px;
         top: 15px;
         left: 15px;
-        
+
     }
-     .result{
+
+    .result {
         font-size: 20px;
-        left: 30px; 
+        left: 30px;
         bottom: 30px;
-     }
-     .message{
+    }
+
+    .message {
         font-size: 7px;
-     }
-    
+    }
+
 }
