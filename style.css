@@ -126,12 +126,9 @@ input:hover {
 
 @media screen and (max-width : 500px) {
 
-
-
     .calc {
-        width: 100%;
+        width: 80%;
         top: 80px;
-
     }
 
     .block {
@@ -145,6 +142,7 @@ input:hover {
     .container {
         left: 110px;
         bottom: 30px;
+        width: fit-content;
     }
 
     .btn {
@@ -158,13 +156,13 @@ input:hover {
         height: 23px;
         top: 15px;
         left: 15px;
-
     }
 
     .result {
-        font-size: 20px;
-        left: 30px;
+        font-size: 18px;
+        left: 20px;
         bottom: 30px;
+        width: fit-content;
     }
 
     .message {
