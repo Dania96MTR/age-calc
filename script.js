@@ -22,6 +22,23 @@ result.innerHTML += `<h1 class="years">--<i id="italy">years</i></h1>
 <h1 class="months">--<i id="italy">months</i></h1>
 <h1 class="days">--<i id="italy">days</i></h1>`
 
+function setElemnt() {
+    dayofbirth.style.borderColor = 'hsl(0, 100%, 67%)';
+    monthofbirth.style.borderColor = 'hsl(0, 100%, 67%)';
+    yearofbirth.style.borderColor = 'hsl(0, 100%, 67%)';
+
+    result.innerHTML = `<h1 class="years">--<i id="italy">years</i></h1>
+                  <h1 class="months">--<i id="italy">months</i></h1>
+                  <h1 class="days">--<i id="italy">days</i></h1>`
+
+}
+
+function paragraphColor() {
+    paragraph.forEach(e => {
+        e.style.color = 'hsl(0, 100%, 67%)'
+    })
+}
+
 
 btn.addEventListener("click", () => {
     let month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
@@ -44,55 +61,27 @@ btn.addEventListener("click", () => {
     <h1 class="days">${calcdDay}<i id="italy">days</i></h1>`
 
     if (dayofbirth.value == "") {
-        paragraph.forEach(e => {
-            e.style.color = 'hsl(0, 100%, 67%)'
-        })
+        paragraphColor()
         errormessage1.textContent = "This field is required"
-        dayofbirth.style.borderColor = 'hsl(0, 100%, 67%)';
-        monthofbirth.style.borderColor = 'hsl(0, 100%, 67%)';
-        yearofbirth.style.borderColor = 'hsl(0, 100%, 67%)';
-
-        result.innerHTML = `<h1 class="years">--<i id="italy">years</i></h1>
-                      <h1 class="months">--<i id="italy">months</i></h1>
-                      <h1 class="days">--<i id="italy">days</i></h1>`
+        setElemnt()
 
     }
     if (monthofbirth.value == "") {
-        paragraph.forEach(e => {
-            e.style.color = 'hsl(0, 100%, 67%)'
-        })
+        paragraphColor()
         errormessage2.textContent = "This field is required"
-        dayofbirth.style.borderColor = 'hsl(0, 100%, 67%)';
-        monthofbirth.style.borderColor = 'hsl(0, 100%, 67%)';
-        yearofbirth.style.borderColor = 'hsl(0, 100%, 67%)';
-
-        result.innerHTML = `<h1 class="years">--<i id="italy">years</i></h1>
-                      <h1 class="months">--<i id="italy">months</i></h1>
-                      <h1 class="days">--<i id="italy">days</i></h1>`
+        setElemnt()
 
     }
     if (yearofbirth.value == "") {
-        paragraph.forEach(e => {
-            e.style.color = 'hsl(0, 100%, 67%)'
-        })
+        paragraphColor()
         errormessage3.textContent = "This field is required"
-        dayofbirth.style.borderColor = 'hsl(0, 100%, 67%)';
-        monthofbirth.style.borderColor = 'hsl(0, 100%, 67%)';
-        yearofbirth.style.borderColor = 'hsl(0, 100%, 67%)';
-
-        result.innerHTML = `<h1 class="years">--<i id="italy">years</i></h1>
-                      <h1 class="months">--<i id="italy">months</i></h1>
-                      <h1 class="days">--<i id="italy">days</i></h1>`
+        setElemnt()
 
     }
 
     for (let i = 0; i < month.length; i++) {
         if (parseInt(dayofbirth.value) > month[i]) {
-            paragraph.forEach(e => {
-                e.style.color = 'hsl(0, 100%, 67%)'
-
-
-            })
+            paragraphColor()
             req.forEach(ele => {
                 ele.innerHTML = ""
                 ele.style.color = 'hsl(0, 100%, 67%)'
@@ -101,13 +90,7 @@ btn.addEventListener("click", () => {
             errormessage1.innerHTML = "Must be a valid date"
             errormessage2.innerHTML = ""
             errormessage3.innerHTML = ""
-            dayofbirth.style.borderColor = 'hsl(0, 100%, 67%)'
-            monthofbirth.style.borderColor = 'hsl(0, 100%, 67%)'
-            yearofbirth.style.borderColor = 'hsl(0, 100%, 67%)'
-
-            result.innerHTML = `<h1 class="years">--<i id="italy">years</i></h1>
-                           <h1 class="months">--<i id="italy">months</i></h1>
-                           <h1 class="days">--<i id="italy">days</i></h1>`
+            setElemnt()
         }
 
 
@@ -115,49 +98,25 @@ btn.addEventListener("click", () => {
 })
 dayofbirth.addEventListener("keyup", function () {
     if (parseInt(this.value) > 31 || parseInt(this.value) <= 0) {
-        paragraph.forEach(e => {
-            e.style.color = 'hsl(0, 100%, 67%)'
-        })
+        paragraphColor()
         errormessage1.textContent = "Must be a valid day"
-        dayofbirth.style.borderColor = 'hsl(0, 100%, 67%)'
-        monthofbirth.style.borderColor = 'hsl(0, 100%, 67%)'
-        yearofbirth.style.borderColor = 'hsl(0, 100%, 67%)'
-
-        result.innerHTML = `<h1 class="years">--<i id="italy">years</i></h1>
-                          <h1 class="months">--<i id="italy">months</i></h1>
-                          <h1 class="days">--<i id="italy">days</i></h1>`
+        setElemnt()
     }
 
 })
 monthofbirth.addEventListener("keyup", function () {
     if (parseInt(this.value) > 12 || parseInt(this.value) <= 0) {
-        paragraph.forEach(e => {
-            e.style.color = 'hsl(0, 100%, 67%)'
-        })
+        paragraphColor()
         errormessage2.textContent = "Must be a valid month"
-        dayofbirth.style.borderColor = 'hsl(0, 100%, 67%)'
-        monthofbirth.style.borderColor = 'hsl(0, 100%, 67%)'
-        yearofbirth.style.borderColor = 'hsl(0, 100%, 67%)'
-
-        result.innerHTML = `<h1 class="years">--<i id="italy">years</i></h1>
-                          <h1 class="months">--<i id="italy">months</i></h1>
-                          <h1 class="days">--<i id="italy">days</i></h1>`
+        setElemnt()
     }
 
 })
 yearofbirth.addEventListener("keyup", function () {
     if (parseInt(this.value) > thisyear || parseInt(this.value) <= 0) {
-        paragraph.forEach(e => {
-            e.style.color = 'hsl(0, 100%, 67%)'
-        })
+        paragraphColor()
         errormessage3.textContent = "Must be in the past"
-        dayofbirth.style.borderColor = 'hsl(0, 100%, 67%)'
-        monthofbirth.style.borderColor = 'hsl(0, 100%, 67%)'
-        yearofbirth.style.borderColor = 'hsl(0, 100%, 67%)'
-
-        result.innerHTML = `<h1 class="years">--<i id="italy">years</i></h1>
-                          <h1 class="months">--<i id="italy">months</i></h1>
-                          <h1 class="days">--<i id="italy">days</i></h1>`
+        setElemnt()
     }
 
 })
