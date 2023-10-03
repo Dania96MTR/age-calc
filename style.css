@@ -126,7 +126,6 @@ input:hover {
 }
 
 
-
 @media screen and (max-width : 500px) {
 
     .calc {
@@ -171,5 +170,53 @@ input:hover {
     .message {
         font-size: 7px;
     }
+
+}
+
+@media (max-width:700px) {
+
+    .calc {
+        width: 80%;
+        top: 80px;
+    }
+
+    .block {
+        width: 100%;
+    }
+
+    input {
+        font-size: 15px;
+    }
+
+    .container {
+        left: 165px;
+        bottom: 30px;
+        width: fit-content;
+    }
+
+    .btn {
+        width: 55px;
+        height: 55px;
+        padding: 12px;
+    }
+
+    svg {
+        width: 23px;
+        height: 23px;
+        top: 15px;
+        left: 15px;
+    }
+
+    .result {
+        font-size: 18px;
+        left: 20px;
+        bottom: 30px;
+        width: fit-content;
+    }
+
+    .message {
+        font-size: 7px;
+    }
+
 
 }
