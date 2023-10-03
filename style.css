@@ -173,7 +173,7 @@ input:hover {
 
 }
 
-@media (max-width:700px) {
+@media (min-width:600px) {
 
     .calc {
         width: 80%;
@@ -189,7 +189,7 @@ input:hover {
     }
 
     .container {
-        left: 165px;
+        left: 170px;
         bottom: 30px;
         width: fit-content;
     }
