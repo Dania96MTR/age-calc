@@ -5,7 +5,7 @@ let dayofbirth = document.querySelector(".day");
 let monthofbirth = document.querySelector(".month");
 let yearofbirth = document.querySelector(".year");
 
-const paragraph = document.querySelectorAll("p");
+const paragraph = document.querySelectorAll(".p");
 const req = document.querySelectorAll(".message");
 
 const errormessage1 = document.querySelector(".message1");
@@ -23,9 +23,9 @@ result.innerHTML += `<h1 class="years">--<i id="italy">years</i></h1>
 <h1 class="days">--<i id="italy">days</i></h1>`
 
 function setElemnt() {
-    dayofbirth.style.borderColor = 'hsl(0, 100%, 67%)';
-    monthofbirth.style.borderColor = 'hsl(0, 100%, 67%)';
-    yearofbirth.style.borderColor = 'hsl(0, 100%, 67%)';
+    dayofbirth.style.borderColor = 'hsl(0, 47%, 81%)';
+    monthofbirth.style.borderColor = 'hsl(0, 47%, 81%)';
+    yearofbirth.style.borderColor = 'hsl(0, 47%, 81%)';
 
     result.innerHTML = `<h1 class="years">--<i id="italy">years</i></h1>
                   <h1 class="months">--<i id="italy">months</i></h1>
@@ -63,18 +63,21 @@ btn.addEventListener("click", () => {
     if (dayofbirth.value == "") {
         paragraphColor()
         errormessage1.textContent = "This field is required"
+        errormessage1.style.color = 'hsl(0, 69%, 69%)'
         setElemnt()
 
     }
     if (monthofbirth.value == "") {
         paragraphColor()
         errormessage2.textContent = "This field is required"
+        errormessage2.style.color = 'hsl(0, 69%, 69%)'
         setElemnt()
 
     }
     if (yearofbirth.value == "") {
         paragraphColor()
         errormessage3.textContent = "This field is required"
+        errormessage3.style.color = 'hsl(0, 69%, 69%)'
         setElemnt()
 
     }
@@ -84,10 +87,11 @@ btn.addEventListener("click", () => {
             paragraphColor()
             req.forEach(ele => {
                 ele.innerHTML = ""
-                ele.style.color = 'hsl(0, 100%, 67%)'
+                ele.style.color = 'hsl(0, 69%, 69%)'
             })
 
             errormessage1.innerHTML = "Must be a valid date"
+            errormessage1.style.color = 'hsl(0, 69%, 69%)'
             errormessage2.innerHTML = ""
             errormessage3.innerHTML = ""
             setElemnt()
@@ -100,6 +104,7 @@ dayofbirth.addEventListener("keyup", function () {
     if (parseInt(this.value) > 31 || parseInt(this.value) <= 0) {
         paragraphColor()
         errormessage1.textContent = "Must be a valid day"
+        errormessage1.style.color = 'hsl(0, 69%, 69%)'
         setElemnt()
     }
 
@@ -108,6 +113,7 @@ monthofbirth.addEventListener("keyup", function () {
     if (parseInt(this.value) > 12 || parseInt(this.value) <= 0) {
         paragraphColor()
         errormessage2.textContent = "Must be a valid month"
+        errormessage2.style.color = 'hsl(0, 69%, 69%)'
         setElemnt()
     }
 
@@ -116,6 +122,7 @@ yearofbirth.addEventListener("keyup", function () {
     if (parseInt(this.value) > thisyear || parseInt(this.value) <= 0) {
         paragraphColor()
         errormessage3.textContent = "Must be in the past"
+        errormessage3.style.color = 'hsl(0, 69%, 69%)'
         setElemnt()
     }
 
