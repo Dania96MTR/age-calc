@@ -99,7 +99,7 @@ btn.addEventListener("click", () => {
 
 
     }
-   
+
 })
 dayofbirth.addEventListener("keyup", function () {
     if (parseInt(this.value) > 31 || parseInt(this.value) <= 0) {
@@ -109,18 +109,7 @@ dayofbirth.addEventListener("keyup", function () {
         setElemnt()
     }
 
-   else if (parseInt(yearofbirth.value) == thisyear && parseInt(monthofbirth.value) == thismonth ){
-       
-         if (parseInt(dayofbirth) <= thisday) {
-            let calcdDay = thisday - parseInt(dayofbirth.value);
-            let calcMonth = thismonth - parseInt(monthofbirth.value);
-            let calcYear = thisyear - parseInt(yearofbirth.value);
-            result.innerHTML = `<h1 class="years">${calcYear}<i id="italy">years</i></h1>
-                             <h1 class="months">${calcMonth}<i id="italy">months</i></h1>
-                             <h1 class="days">${calcdDay}<i id="italy">days</i></h1>`
 
-        }
-    }
 
 })
 monthofbirth.addEventListener("keyup", function () {
@@ -131,36 +120,15 @@ monthofbirth.addEventListener("keyup", function () {
         setElemnt()
     }
 
-    else if (parseInt(yearofbirth.value) == thisyear && parseInt(monthofbirth.value) < thismonth) {
-        let calcdDay = thisday - parseInt(dayofbirth.value);
-        let calcMonth = thismonth - parseInt(monthofbirth.value);
-        let calcYear = thisyear - parseInt(yearofbirth.value);
-        result.innerHTML = `<h1 class="years">${calcYear}<i id="italy">years</i></h1>
-                             <h1 class="months">${calcMonth}<i id="italy">months</i></h1>
-                             <h1 class="days">${calcdDay}<i id="italy">days</i></h1>`
-
-    }
-
 })
 yearofbirth.addEventListener("keyup", function () {
-    if (parseInt(this.value) > thisyear || parseInt(this.value) <= 0) {
+    if (parseInt(this.value) >= thisyear || parseInt(this.value) <= 0) {
         paragraphColor()
         errormessage3.textContent = "Must be in the past"
         errormessage3.style.color = 'hsl(0, 69%, 69%)'
         setElemnt()
     }
 
-    if (parseInt(yearofbirth.value) == thisyear) {
-        if (parseInt(monthofbirth.value) > thismonth) {
-            paragraphColor()
-            errormessage2.textContent = "Must be a valid month"
-            errormessage2.style.color = 'hsl(0, 69%, 69%)'
-            setElemnt()
-
-        }
-        
-    }
-    
 
 })
 
